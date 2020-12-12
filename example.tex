@@ -92,7 +92,43 @@
 \end{frame}
 
 \begin{frame}{Informationstheorie}
+  \begin{figure}
+    \begin{minipage}{0.7\textwidth}
+      \begin{itemize}
+        \item[] ... beschäftigt sich mit Quantifizierung, Speicherung und Übertragung von Information
+        \item[]
+        \item Konzept von Information hat verschiedene Bedeutungen \\verwandt mit: Nachricht, Kommunikation, Daten, Wissen
+        \item hier: Information ist Folge von Symbolen aus einem Alphabet $Z = \{z_1, z_2,...,z_m\}$
+        \item Informationsgehalt eines Zeichens: $I(z) = -\log_a(p_z)$ \\mit Wahrscheinlichkeit $p_z$, Mächtigkeit $a$
+        \item Entropie eines Zeichens (Shannon): $H = E[I] = \sum_{z \in Z}{p_z I(z)} = - \sum_{z \in Z}{ p_z \log_a(p_z)}$
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.28\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{images/binär.jpg}
+        \caption{binäre Information}
+      \end{figure}
+    \end{minipage}
+  \end{figure}
+\end{frame}
 
+\begin{frame}{physikalische Information und Entropie}
+  \begin{itemize}
+    \item Information beschreibt physikalisches System:
+    \begin{itemize}
+      \item[\bullet] Information löst Ungewissheit über Zustand eines physikalischen Systems
+      \item[\bullet] Information ist Messung für Wahrscheinlichkeit eines Zustandes
+    \end{itemize}
+    \item[]
+    \item $\text{fehlende Information} = \text{nötige Information, um Zustand zu beschreiben} = I = -k \sum_{i=1}^n{p_i \ln(p_i)}$ \\ mit $p_i$ der Wahrscheinlichkeiten der $n$ Zustände des Systems
+    \item[]
+    \begin{itemize}
+      \item[\rightarrow] binäre Entropie der Informationstheorie: $k = \ln(2)^{-1}$
+      \item[\rightarrow] Gibbs Entropie: $k = k_b$
+    \end{itemize}
+    \item Von Neumann Entropie, QM-Analogon: $S(\rho) = -Tr(\rho \ln\rho)$ mit Dichtematrix $\rho$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Algorithmische Informationstheorie}
