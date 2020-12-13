@@ -17,6 +17,8 @@
 \usepackage{hyperref}
 \usepackage{bookmark}
 
+\usepackage{algorithm2e}
+
 % load the theme after all packages
 
 \usetheme[
@@ -132,28 +134,169 @@
 \end{frame}
 
 \begin{frame}{Algorithmische Informationstheorie}
-
+  \begin{itemize}
+    \item Bestimmung des Informationsgehalt über Kolmogorow-Komplexität
+    \item Kolmogorow-Komplexität:
+    \begin{itemize}
+      \item Informationsgehalts einer Zeichenkette = Länge des kleinsten Algorithmus, der Zeichenkette erzeugt
+      \item nicht berechenbar, aufgrund des Halteproblems kleinster Algorithmus nicht bestimmbar
+      \item unabhängig von der verwendeten universellen Programmiersprache abgesehen von additiver Konstante $c$
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[width=0.2\textwidth]{images/kolmo.png}
+    %\caption{binäre Information}
+  \end{figure}
+  \begin{itemize}
+    \item algorithmic randomness:
+    \begin{itemize}
+      \item Zeichenkette ist zufällig, wenn Kolmogorow-Komplexität $>=$ Länge der Zecihenkette
+      \item Zufälligkeit einer endlichen Zeichenkette abhängig von universellen Programmiersprache
+      %\item Löf randomness: unendliche Folge $S$ ist $c$-inkompressibel, wenn Teilfoge $w$
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Digitale Information, Boolesche Algebra, Klassische Logik}
-
+  \begin{figure}
+    \begin{minipage}{0.7\textwidth}
+      \begin{itemize}
+        \item Digitale Information: diskrete endliche Darstellung \rightarrow Ziffern, Buchstaben \rightarrow binär
+        \item Boolesche Algebra mit Operatoren:
+        \item[] $\land$ UND $\lor$ ODER $\lnot$ NICHT
+        \item klassische Logik:
+        \begin{itemize}
+          \item Prinzip der Zweiwertigkeit
+          \item Prinzip der Extensionalität
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.28\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{images/bool.png}
+        \caption{Boolesche Algebra.}
+      \end{figure}
+    \end{minipage}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Vor Turing}
+  \begin{itemize}
+    \item Formulierung des Hilbertprogramms in 1920er
+    \item Ziel: Nachweis der Widerspruchsfreiheit der Axiomensysteme der Mathematik
+    \item[\rightarrow] Entscheidungsproblem: \enquote{First, was mathematics complete ... Second, was mathematics consistent ... \\ And thirdly, was mathematics decidable?}
+    \item[\rightarrow] Beantwortung durch Gödels Unvollständigkeitssätze
+    \item[]
+    \item Was ist ein Algorithmus?
+  \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Turingmaschine}
-
+\begin{frame}{Turingmaschine - informelle Einführung}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      \begin{itemize}
+        \item Interpretation von Logik als Prozess
+        \item Definition Algorithmus und der Berechenbarkeit
+        \item Analogie eines denkenden, lesenden und schreibenden Mathematikers
+      \end{itemize}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{images/turing.png}
+        \caption{Turingmaschine.}
+      \end{figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      \begin{itemize}
+        \item Turingmaschine:
+        \begin{itemize}
+          \item Speicherband: unendlich viele, sequentiell angeordnete Felder
+          \item Feld: nimmt einen von endlich vielen Zuständen an
+          \item Lese-Schreib-Kopf: Verarbeitung von Information, nimmt einen von endlich vielen Zuständen an
+        \end{itemize}
+        \item Prozess:
+        \begin{itemize}
+          \item Kopf liest Zustand des aktuellen Feldes
+          \item Kopf verarbeitet eignen Zustand und Feldzustand \\ (Überführungsfunktion)
+          \item Änderung des Kopf und Feldzustandes
+          \item Kopf bewegt sich ein Feld nach rechts oder links
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+  \end{figure}
 \end{frame}
 
-\begin{frame}{Turingmaschine 2}
-
+\begin{frame}{Anmerkungen zur Turingmaschine}
+  \begin{figure}
+    \begin{minipage}{0.29\textwidth}
+      Algorithmus:
+      \begin{itemize}
+        \item Ausfürbarkeit
+        \item Statistische Finitheit
+        \item Dynamische Finitheit
+        \item Terminierung
+        \item optional:
+        \begin{itemize}
+          \item[\bullet] Determiniertheit
+          \item[\bullet] Determinismus
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.69\textwidth}
+      Universelle Turingmaschine (UTM):
+      \begin{itemize}
+        \item UTM simuliert beliebig Turingmaschine für beliebigen Input
+        \item Speicherung der Turingmaschine und des Inputs auf Speicherband der UTM
+        \item[\rightarrow] Halteproblem
+      \end{itemize}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{images/UTM.png}
+        \caption{Turingmaschine.}
+      \end{figure}
+    \end{minipage}
+  \end{figure}
 \end{frame}
 
-\begin{frame}{Implementierung einer Turingmaschine}
-
+\begin{frame}{Anmerkungen zur Turingmaschine}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      Halteproblem:
+      \begin{itemize}
+        \item Analog zu Gödels Unvollständigkeitssatz:
+        \begin{itemize}
+          \item Logik ist selbst-widersprechend und unvollständig
+          \item Problem von auf sich selbst bezogene Behauptungen
+          \item Lügner-Paradox: \enquote{Dieser Satz ist falsch.}
+        \end{itemize}
+        \item Keine UTM kann Frage beantworten, ob eine beliebige Turingmaschine anhält (Antwort liefert)
+        \item Konstruktion von selbst-widersprechender UTM:
+      \end{itemize}
+      \begin{algorithm}[H]
+        \KwResult{Hält beliebige Turingmaschine T nicht an?}
+        \Begin{
+          T = beliebige Turingmaschine \;
+          Bestimme ob T anhält \;
+            \If{T hält nicht an == True}{return Antwort\;}
+        }
+      \end{algorithm}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      Church-Turing-These:
+      \begin{itemize}
+        \item Jede intuitiv berechenbare Funktion kann durch eine UTM berechnet werden
+        \item intuitiv berechenbar: mathematisch ungenauer Begriff
+        \item Turing-berechenbar: Existenz von (terminierendem) Algorithmus
+        \item[]
+        \item striktere, physikalische Version: Church–Turing–Deutsch-Hypothese
+        \item[] UTM kann jeden phyiskalischen Porzess simulieren
+      \end{itemize}
+    \end{minipage}
+  \end{figure}
 \end{frame}
+
 
 \begin{frame}{Universum als digitaler Computer}
 
@@ -187,7 +330,7 @@
 
 \end{frame}
 
-\begin{frame}{Das Universum ist kein Computer}
+\begin{frame}{Gegenposition - Das Universum ist kein Computer}
 
 \end{frame}
 
