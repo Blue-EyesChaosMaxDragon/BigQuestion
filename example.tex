@@ -18,6 +18,7 @@
 \usepackage{bookmark}
 
 \usepackage{algorithm2e}
+\usepackage{braket}
 
 % load the theme after all packages
 
@@ -150,10 +151,11 @@
   \begin{itemize}
     \item algorithmic randomness:
     \begin{itemize}
-      \item Zeichenkette ist zufällig, wenn Kolmogorow-Komplexität $>=$ Länge der Zecihenkette
+      \item Zeichenkette ist zufällig, wenn Kolmogorow-Komplexität $>=$ Länge der Zeichenkette
       \item Zufälligkeit einer endlichen Zeichenkette abhängig von universellen Programmiersprache
       %\item Löf randomness: unendliche Folge $S$ ist $c$-inkompressibel, wenn Teilfoge $w$
     \end{itemize}
+    \item algorithmic probability: kurze Algorithmen sind wahrscheinlicher als lange
   \end{itemize}
 \end{frame}
 
@@ -291,23 +293,146 @@
         \item Turing-berechenbar: Existenz von (terminierendem) Algorithmus
         \item[]
         \item striktere, physikalische Version: Church–Turing–Deutsch-Hypothese
-        \item[] UTM kann jeden phyiskalischen Porzess simulieren
+        \item klassiche UTM kann jeden phyiskalischen Porzess simulieren
       \end{itemize}
     \end{minipage}
   \end{figure}
 \end{frame}
 
 
-\begin{frame}{Universum als digitaler Computer}
+\begin{frame}{Universum als universeller digitaler Computer}
+  \begin{itemize}
+    \item Digitaler Computer = System, das jede Folge von logischen Operationen ausführen kann
+    \item Frage: Ist das Universum ein universeller digitaler Computer?
+    \item[]
+    \item[\rightarrow] Frage I: Kann das Universum universelle digitale Berchenungen nach Turing durchführen?
+    \item[\rightarrow] Frage II: Keine eine klassiche UTM effektiv die physikalischen Prozesse des Universum simulieren?
+    \item[]
+    \item naive Antwort: ja
+    \item elektronischer Computer $\approx$ universeller digitaler Computer, der UTM simulieren kann
+    \item Church–Turing–Deutsch
+  \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Universum als digitaler Computer 2}
+\begin{frame}{Universum als universeller digitaler Computer 2}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      Frage I:
+      \begin{itemize}
+        \item UTM benötigt unendlich viel Speicherplatz
+        \item Liefer da Universum unendlich erweiterbaren Speicherplatz?
+        \item echte elektrische Computer können als UTM verstanden werden, trotz endlichem Speicher
+        \item Existenz von elektrischen Computer
+        \item[\rightarrow] Antwort: Gesetze der Physik ermöglichen wahrscheinlich universellen digitalen Computer
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      Frage II:
+      \begin{itemize}
+        \item UTM kann jeden berechenbaren phyiskalischen Porzess simulieren
+        \item aber auch effizient auf kleinen Volumen von Raum und Zeit?
+        \item[\rightarrow] Antwort: wahrscheinlich nicht
+      \end{itemize}
+    \end{minipage}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Architektur des universellen digitalen Computers}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      \begin{itemize}
+        \item Gesetze der Physik sind: lokal, homogen und isotrop
+        \item[\rightarrow] Computer-Version: zellulärer Automat
+        \begin{itemize}
+          \item Anordnung von Zellen mit endlichen Möglichkeit an Zusänden
+          \item Zellen werden aktualisiert als Funktion des Zustandes der Zelle und ihrer Nachbarn
+          \item Universum als sich selbst reproduzierender zellulärer Automat
+          \item Universm besteht aus Bits, die lokalen logischen Operationen unterliegen
+        \end{itemize}
+        \item[]
+        \item[\rightarrow] Frage III: Ist das Universum ein zellulärer Automat?
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.8\textwidth]{images/zelle.png}
+        \caption{1-dimensionaler zellulärer Automat.}
+      \end{figure}
+    \end{minipage}
+  \end{figure}
+
 
 \end{frame}
 
-\begin{frame}{Effizienz von digitalen Computern}
+\begin{frame}{Effizienz von digitalen Computern in Quantensimulationen}
+  \begin{itemize}
+    \item Quanteneffekte (Verschränkgung) nicht berechenbar durch klassische lokale Modelle mit versteckten Variablen
+    \item benötigt nicht-lokale Modelle mit:
+    \begin{itemize}
+      \item superluminare Kommunikation
+      \item aufwendiger Simulation von Qubit
+    \end{itemize}
+    \item[\rightarrow] Antwort Frage III: Universum kein zellulärer Automat
+    \item[]
+    \item System mit $N$ Subssytemen, z.B. $N$ benötigt $O(2^N)$ klassische Bits
+    \item benötigt exponentielle Kompression, die (noch) nicht existiert
+    \item[\rightarrow] Antwort Frage II: klassicher digitalen Computern wahrscheinlich nicht effizient
+  \end{itemize}
 
+\end{frame}
+
+\begin{frame}{Qubit}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      \begin{itemize}
+        \item Analogon zu klassischem Bit, Basis-Einheit der Quateninformation
+        \item reiner Zustand eines Qubits als Superposition der zwei Basiszutände
+        \item[] $\ket{\phi} = \alpha \ket{0} + \beta \ket{1} $ mit Basiszutänden $\ket{0} = \begin{pmatrix}1\\0\end{pmatrix}$, $\ket{1} = \begin{pmatrix}0\\1\end{pmatrix}$ und $|\alpha|^2 |\beta|^2 = 1$
+        \item reiner Zustand auf Bloch Kugel
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      \begin{itemize}
+        \item BLock Kugel Repräsentation
+        \item[] $\alpha = \exp(i\psi) \cdot \cos(\theta/2) = \cos(\theta/2)$
+        \item[] $\alpha = \exp(i(\psi+\phi) \cdot \sin(\theta/2) = \exp(i\phi) \cdot \sin(\theta/2)$
+        \begin{figure}
+          \includegraphics[width=0.6\textwidth]{images/Bloch.png}
+          \caption{Bloch Kugel.}
+        \end{figure}
+      \end{itemize}
+    \end{minipage}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Qubit}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      gemischter Zustand:
+      \begin{itemize}
+        \item Interaktion, Dekohärenz \rightarrow \\
+        gemischter Zustand von reinen Zuständen
+        \item befindet sich in Bloch Kugel
+        \item 3 Freiheitsgrade (zusätlich zu $\phi$ und $\theta$ noch $r$)
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      Quantenverschränkung:
+      \begin{itemize}
+        \item Bell Zustand von zwei Qubits
+        \item[] $\frac{1}{\sqrt{2}}(\ket{00} + \ket{11})$
+        \item Trennung der 2 verschränkten Qubits
+        \item Messung des erste Qubits in perfekter Korrelation mit zweitem Qubit
+        \item keine Abhängigkeit von Entfernung der Qubits
+      \end{itemize}
+
+    \end{minipage}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Quantencomputer}
@@ -335,6 +460,10 @@
 \end{frame}
 
 \begin{frame}{Ausblick}
+
+\end{frame}
+
+\begin{frame}{Literaturverzeichnis}
 
 \end{frame}
 
