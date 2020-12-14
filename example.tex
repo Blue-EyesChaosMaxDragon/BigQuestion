@@ -48,7 +48,13 @@
 
 \begin{frame}{Inhalt}
   \begin{itemize}
-    \item
+    \item Historische Einführung
+    \item Information
+    \item Turingmaschine
+    \item Das Universum als universeller digitaler Computer
+    \item Quantencomputer
+    \item Das Universum als Quantencomputer
+    \item Gegenposition - Das Universum ist kein Computer
   \end{itemize}
 \end{frame}
 
@@ -278,9 +284,9 @@
       \begin{algorithm}[H]
         \KwResult{Hält beliebige Turingmaschine T nicht an?}
         \Begin{
-          T = beliebige Turingmaschine \;
-          Bestimme ob T anhält \;
-            \If{T hält nicht an == True}{return Antwort\;}
+          T = beliebige Turingmaschine und I = beliebiger Input \;
+            \While{T hat nicht angehalten == True}{Führe Schritt von T aus mit I\;}
+          return Antwort \;
         }
       \end{algorithm}
     \end{minipage}
