@@ -387,32 +387,34 @@
     \item benötigt exponentielle Kompression, die (noch) nicht existiert
     \item[\rightarrow] Antwort Frage II: klassicher digitalen Computern wahrscheinlich nicht effizient
   \end{itemize}
-
 \end{frame}
 
-\begin{frame}{Qubit}
+\begin{frame}{Qubit \footnote[200]{Mit Quanten rechnen, Beatrice Marie Ellerhoff, Springer, 2020}}
   \begin{figure}
     \begin{minipage}{0.49\textwidth}
       \begin{itemize}
         \item Analogon zu klassischem Bit, Basis-Einheit der Quateninformation
         \item reiner Zustand eines Qubits als Superposition der zwei Basiszutände
         \item[] $\ket{\phi} = \alpha \ket{0} + \beta \ket{1} $ mit Basiszutänden $\ket{0} = \begin{pmatrix}1\\0\end{pmatrix}$, $\ket{1} = \begin{pmatrix}0\\1\end{pmatrix}$ und $|\alpha|^2 |\beta|^2 = 1$
-        \item reiner Zustand auf Bloch Kugel
+        \item System aus mehreren Qubits mit Tensorprodukt:
+        \item[] $\ket{0} \otimes \ket{0} = \ket{00} = \begin{pmatrix}1\\0\\0\\0\end{pmatrix}$, $\ket{01} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix}$, $\ket{10} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix}$, $\ket{11} = \begin{pmatrix}1\\0\\0\\1\end{pmatrix}$
+        \item $n$-Qubits \rightarrow $2^n$-dim. Hilbertraum
       \end{itemize}
     \end{minipage}
     \hfill
     \begin{minipage}{0.49\textwidth}
       \begin{itemize}
-        \item BLock Kugel Repräsentation
+        \item Bloch-Kugel - Repräsentation eines reinen Zustandes
         \item[] $\alpha = \exp(i\psi) \cdot \cos(\theta/2) = \cos(\theta/2)$
         \item[] $\alpha = \exp(i(\psi+\phi) \cdot \sin(\theta/2) = \exp(i\phi) \cdot \sin(\theta/2)$
         \begin{figure}
-          \includegraphics[width=0.6\textwidth]{images/Bloch.png}
-          \caption{Bloch Kugel.}
+          \includegraphics[width=0.56\textwidth]{images/Bloch.png}
+          \caption{Bloch Kugel. \footnotemark[100]}
         \end{figure}
       \end{itemize}
     \end{minipage}
   \end{figure}
+  \footnotetext[100]{Qubit, Wikipedia}
 \end{frame}
 
 \begin{frame}{Qubit}
@@ -470,6 +472,10 @@
 \end{frame}
 
 \begin{frame}{Literaturverzeichnis}
+  \begin{itemize}
+    \item[100] https://en.wikipedia.org/wiki/Qubit
+    \item[200]
+  \end{itemize}
 
 \end{frame}
 
