@@ -66,10 +66,10 @@
   \begin{itemize}
     \item ursprüngliche Idee: Konrad Zuses Buch Rechnender Raum (1969)
     \item Hypothese: Universum ist digitaler Computer, genauer: zellulärer Automat
-    \item Komatibilität von Computern mit: \\Informationstheorie, statistischer Mechanik, Quantenmechanik
+    \item Kompatibilität von Computern mit: \\Informationstheorie, statistischer Mechanik, Quantenmechanik
     \item Begriff geprägt durch  Edward Fredkin, alternativ: digitale Philosophie
     \item[]
-    \item[\rightarrow] Digitale Physik: Theorien mit Prämise, Universum durch Information beschreibbar ist
+    \item[\rightarrow] Digitale Physik: Theorien mit Prämisse, Universum durch Information beschreibbar ist
   \end{itemize}
 \end{frame}
 
@@ -159,7 +159,7 @@
     \begin{itemize}
       \item Zeichenkette ist zufällig, wenn Kolmogorow-Komplexität $>=$ Länge der Zeichenkette
       \item Zufälligkeit einer endlichen Zeichenkette abhängig von universellen Programmiersprache
-      %\item Löf randomness: unendliche Folge $S$ ist $c$-inkompressibel, wenn Teilfoge $w$
+      %\item Löf randomness: unendliche Folge $S$ ist $c$-inkompressibel, wenn Teilfolge $w$
     \end{itemize}
     \item algorithmic probability: kurze Algorithmen sind wahrscheinlicher als lange
   \end{itemize}
@@ -196,7 +196,7 @@
     \item[\rightarrow] Entscheidungsproblem: \enquote{First, was mathematics complete ... Second, was mathematics consistent ... \\ And thirdly, was mathematics decidable?}
     \item[\rightarrow] Beantwortung durch Gödels Unvollständigkeitssätze
     \item[]
-    \item Was ist ein Algorithmus?
+    \item Was ist mathematisch exakt betrachtet ein Algorithmus?
   \end{itemize}
 
 \end{frame}
@@ -240,7 +240,7 @@
     \begin{minipage}{0.29\textwidth}
       Algorithmus:
       \begin{itemize}
-        \item Ausfürbarkeit
+        \item Ausführbarkeit
         \item Statistische Finitheit
         \item Dynamische Finitheit
         \item Terminierung
@@ -282,7 +282,7 @@
         \item Konstruktion von selbst-widersprechender UTM:
       \end{itemize}
       \begin{algorithm}[H]
-        \KwResult{Hält beliebige Turingmaschine T nicht an?}
+        \KwResult{Hält beliebige Turingmaschine T an?}
         \Begin{
           T = beliebige Turingmaschine und I = beliebiger Input \;
             \While{T hat nicht angehalten == True}{Führe Schritt von T aus mit I\;}
@@ -312,11 +312,11 @@
     \item Frage: Ist das Universum ein universeller digitaler Computer?
     \item[]
     \item[\rightarrow] Frage I: Kann das Universum universelle digitale Berchenungen nach Turing durchführen?
-    \item[\rightarrow] Frage II: Keine eine klassiche UTM effektiv die physikalischen Prozesse des Universum simulieren?
+    \item[\rightarrow] Frage II: Keine eine klassische UTM effektiv die physikalischen Prozesse des Universum simulieren?
     \item[]
     \item naive Antwort: ja
     \item elektronischer Computer $\approx$ universeller digitaler Computer, der UTM simulieren kann
-    \item Church–Turing–Deutsch
+    \item Church–Turing–Deutsch-Hypothese
   \end{itemize}
 
 \end{frame}
@@ -337,7 +337,7 @@
     \begin{minipage}{0.49\textwidth}
       Frage II:
       \begin{itemize}
-        \item UTM kann jeden berechenbaren phyiskalischen Porzess simulieren
+        \item UTM kann jeden berechenbaren physikalischen Prozess simulieren
         \item aber auch effizient auf kleinen Volumen von Raum und Zeit?
         \item[\rightarrow] Antwort: wahrscheinlich nicht
       \end{itemize}
@@ -355,7 +355,7 @@
           \item Anordnung von Zellen mit endlichen Möglichkeit an Zusänden
           \item Zellen werden aktualisiert als Funktion des Zustandes der Zelle und ihrer Nachbarn
           \item Universum als sich selbst reproduzierender zellulärer Automat
-          \item Universm besteht aus Bits, die lokalen logischen Operationen unterliegen
+          \item Universum besteht aus Bits, die lokalen logischen Operationen unterliegen
         \end{itemize}
         \item[]
         \item[\rightarrow] Frage III: Ist das Universum ein zellulärer Automat?
@@ -365,7 +365,7 @@
     \begin{minipage}{0.49\textwidth}
       \begin{figure}
         \includegraphics[width=0.8\textwidth]{images/zelle.png}
-        \caption{1-dimensionaler zellulärer Automat.}
+        \caption{eindimensionaler zellulärer Automat.}
       \end{figure}
     \end{minipage}
   \end{figure}
@@ -375,15 +375,17 @@
 
 \begin{frame}{Effizienz von digitalen Computern in Quantensimulationen}
   \begin{itemize}
-    \item Quanteneffekte (Verschränkgung) nicht berechenbar durch klassische lokale Modelle mit versteckten Variablen
-    \item benötigt nicht-lokale Modelle mit:
+    \item Bell Theorem:
+    \item[] Quanteneffekte (Verschränkung) nicht berechenbar durch klassische lokale Modelle mit versteckten Variablen
+    \item[]
+    \item benötigen nicht-lokale Modelle mit:
     \begin{itemize}
       \item superluminare Kommunikation
       \item aufwendiger Simulation von Qubit
     \end{itemize}
     \item[\rightarrow] Antwort Frage III: Universum kein zellulärer Automat
     \item[]
-    \item System mit $N$ Subssytemen, z.B. $N$ benötigt $O(2^N)$ klassische Bits
+    \item System mit $N$ Subssytemen, z.B. $N$ Kernspins, benötigt $O(2^N)$ klassische Bits
     \item benötigt exponentielle Kompression, die (noch) nicht existiert
     \item[\rightarrow] Antwort Frage II: klassicher digitalen Computern wahrscheinlich nicht effizient
   \end{itemize}
@@ -398,7 +400,7 @@
         \item[] $\ket{\phi} = \alpha \ket{0} + \beta \ket{1} $ mit Basiszutänden $\ket{0} = \begin{pmatrix}1\\0\end{pmatrix}$, $\ket{1} = \begin{pmatrix}0\\1\end{pmatrix}$ und $|\alpha|^2 |\beta|^2 = 1$
         \item System aus mehreren Qubits mit Tensorprodukt:
         \item[] $\ket{0} \otimes \ket{0} = \ket{00} = \begin{pmatrix}1\\0\\0\\0\end{pmatrix}$, $\ket{01} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix}$, $\ket{10} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix}$, $\ket{11} = \begin{pmatrix}1\\0\\0\\1\end{pmatrix}$
-        \item $n$-Qubits \rightarrow $2^n$-dim. Hilbertraum
+        \item $n$-Qubits \rightarrow $2^n$-dim. Hilbertraum \rightarrow $2^n$ klassische Bits
       \end{itemize}
     \end{minipage}
     \hfill
@@ -417,64 +419,206 @@
   \footnotetext[100]{Qubit, Wikipedia}
 \end{frame}
 
-\begin{frame}{Qubit}
+\begin{frame}{Quantenverschränkung \footnote[200]{Mit Quanten rechnen, Beatrice Marie Ellerhoff, Springer, 2020} \footnote[100]{Qubit, Wikipedia} }
   \begin{figure}
     \begin{minipage}{0.49\textwidth}
-      gemischter Zustand:
       \begin{itemize}
-        \item Interaktion, Dekohärenz \rightarrow \\
-        gemischter Zustand von reinen Zuständen
-        \item befindet sich in Bloch Kugel
-        \item 3 Freiheitsgrade (zusätlich zu $\phi$ und $\theta$ noch $r$)
+        \item Produkt von 1-Qubit-Zuständen ergibt $n$-Qubit-Zustand:
+        \item[] $\frac{1}{\sqrt{2}}(\ket{0}_1 + \ket{1}_1) \otimes \frac{1}{\sqrt{2}}(\ket{0}_2 - \ket{1}_2) = \frac{1}{2}(\ket{00}-\ket{01}+\ket{10}-\ket{11} ) $
+        \item[]
+        \item nicht jeder $n$-Qubit-Zustand darstellbar als Produkt von 1-Qubit-Zuständen \rightarrow Verschränkung
+        \item einfachstes Beispiel: Bell-Zustand
+        \item[] $\frac{1}{\sqrt{2}}(\ket{00} + \ket{11})$
       \end{itemize}
     \end{minipage}
     \hfill
     \begin{minipage}{0.49\textwidth}
-      Quantenverschränkung:
+      Im verschränkten Zustand:
       \begin{itemize}
-        \item Bell Zustand von zwei Qubits
-        \item[] $\frac{1}{\sqrt{2}}(\ket{00} + \ket{11})$
-        \item Trennung der 2 verschränkten Qubits
+        \item fehlende Information über Zustand des einzelnen Qubits
+        \item[\rightarrow] gemischter Zustand, Beschreibung über Dichtematrix
+        \item erst durch Messung ist genauer Zustand bekannt
+        \item[]
         \item Messung des erste Qubits in perfekter Korrelation mit zweitem Qubit
-        \item keine Abhängigkeit von Entfernung der Qubits
+        \item keine Abhängigkeit von Entfernung \rightarrow nichtlokal
       \end{itemize}
-
+      %gemischter Zustand:
+      %\begin{itemize}
+      %  \item befindet sich in Bloch Kugel
+      %  \item 3 Freiheitsgrade (zusätlich zu $\phi$ und $\theta$ noch $r$)
+      %\end{itemize}
     \end{minipage}
   \end{figure}
 \end{frame}
 
 \begin{frame}{Quantencomputer}
+  \begin{itemize}
+    \item wichtige Prinzipien: Superposition und Verschränkung
+    \item Quantenregister \leftarrow \rightarrow klassische Register (Zeichenkette)
+    \item Quantengatter \leftarrow \rightarrow Logikgatter
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quantenregister \footnote[300]{Quantencomputer, Wikipedia}}
+  \begin{itemize}
+    \item Analog zu klassischem Computer: Zusammenfassung mehrerer Bits zu Register (Zeichenkette)
+    \item[\rightarrow] Quantenregister = Tensorprodukt einzelner 1-Qubit-Zustände
+    \item Register im Zustand 01010100 \rightarrow Quantenregister  im Zustand $\ket{01010100}$
+    \item Zustand eines Quantenregisters mit $N$-Qubits:
+    \item[] $\psi = \sum_{i_1 ...i_N} c_{i_1 ...i_N} \ket{i_1 ... i_N} $
+    \item[]
+    \item Messung des Zustand des Quantenregisters \rightarrow Informationsgehalt: Quantenregister = klassisches Register
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Quantengatter \footnote[200]{Mit Quanten rechnen, Beatrice Marie Ellerhoff, Springer, 2020}}
+  \begin{itemize}
+    \item Logikgatter: Anordnung zur Ausführung logischer Operatoren auf Bits
+    \item Quantengatter: Ausführung von Operatoren auf Qubit-Zuständen
+    \item $U \ket{\phi_1} = \ket{\phi_2}$
+    \item[]
+    \item Beispiele:
+  \end{itemize}
+  \begin{figure}
+    \begin{minipage}{0.49\textwidth}
+      \begin{figure}
+          \includegraphics[width=0.56\textwidth]{images/Hadamard.png}
+          \caption{Hadamard-Gatter. \footnotemark[200]}
+      \end{figure}
+      \begin{itemize}
+        \item[] $\frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) = \ket{+}$,  $\frac{1}{\sqrt{2}} (\ket{0} - \ket{1}) = \ket{-}$
+      \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+      \begin{figure}
+          \includegraphics[width=0.8\textwidth]{images/CNOT.png}
+          \caption{CNOT-Gatter. \footnotemark[200]}
+      \end{figure}
+    \end{minipage}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Kombination von Hadamard und CNOT für Bell-Zustand}
+  \begin{figure}
+      \includegraphics[width=0.7\textwidth]{images/kombi.png}
+      \caption{kombiniertes Hadamard- und CNOT-Gatter für Bell-Zustand. \footnote[200]{Mit Quanten rechnen, Beatrice Marie Ellerhoff, Springer, 2020}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Universum als Quantencomputer \footnote[400]{The Universe as Quantum Computer, Seth Lloyd, 2013}}
+  \begin{itemize}
+    \item Frage I: Erlaubt das Universum Quantencomputer?
+    \item Antwort: ja, aber...
+    \begin{itemize}
+      \item[] ... Unbegrenzter Speicherplatz im Universum?
+      \item[] ... Technische Fähigkeit, großangelegten Quantencomputer zu bauen fehlt uns (noch)
+    \end{itemize}
+    \item[]
+    \item Frage II: Kann ein Quantencomputer effektiv die physikalischen Prozesse des Universum simulieren?
+    \item Antwort: wahrscheinlich
+    \begin{itemize}
+      \item[] Prinzipien des Universums = Prinzipien von Quantencomputern
+      \item[] Grenze für Hochenergie-Dynamik \rightarrow Planck-Skala
+    \end{itemize}
+    \item[]
+    \item Frage III: Ist das Universum ein quantenphysikalischer zellulärer Automat?
+    \item Antwort: wahrscheinlich
+    \begin{itemize}
+      \item[] Ableitung von zellulärem Automat aus Gitter-Eichtheorien
+      \item[] aktuelle Beobachtungen: Prozesse des Universums sind homogen, isotrop und lokal
+    \end{itemize}
+  \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Quantencomputer 2}
+\begin{frame}{Universum als quantenphysikalischer zellulärer Automat}
+  \begin{itemize}
+    \item Antwort auf Frage:
+    \item Warum ist das Universum so strukturiert und trotzdem so komplex?
+    \item[]
+    \item Erwartung: einfacher Anfangszustand + einfache Gesetze \rightarrow einfacher aktueller Zustand
+    \item Realität: Universum voller komplexer Strukturen
+    \item[]
+    \item Erklärung:
+    \begin{itemize}
+      \item bildliche Vorstellung: Affen bedienen Tastatur des Universums
+      \item produzieren viele \underline{nicht} funktionierende Programme
+      \item aber auch \underline{zufällig} viele funktionierende \underline{kurze} Programme
+      \item kurze Programme erzeugen scheinbar komplexe Strukturen \rightarrow Kolmogorow-Komplexität vs. klassicher Informationsgehalt
+      \item \underline{kürzesten} Programme sind \underline{zufällig}, sonst existieren noch kürzere Programme, die selbe Struktur erzeugen
+      \item[\rightarrow] Quantenfluktuation für Erzeugung von zufälligen Bits
+    \end{itemize}
+  \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Universum als Quantencomputer}
-
-\end{frame}
-
-\begin{frame}{Universum als Quantencomputer 2}
-
-\end{frame}
-
-\begin{frame}{Digitaler Computer vs. Quantencomputer}
+\begin{frame}{Kritikpunkte: Universum als Quantencomputer}
+  \begin{itemize}
+    \item Fragen nicht geklärt:
+    \item[] Ist das Universum deterministisch oder zufällig?
+    \item[] Was ist Effizienz von klassischen Computern für Quanteneffekte?
+    \item[]
+    \item echter Zufall = maximale Kolmogorow-Komplexität
+    \item Prinzip von Occam's razor: Favorisiere einfache Erklärungen \rightarrow Echter Zufall ist keine gute Wahl
+    \item[]
+    \item Annahme: \underline{kürzesten} Programme sind \underline{zufällig}, sonst existieren noch kürzere Programme, die selbe Struktur erzeugen
+    \item nicht belegbar \rightarrow Kolmogorow-Komplexität/Halteproblem nicht berechenbar
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}{Gegenposition - Das Universum ist kein Computer}
+  \begin{itemize}
+    \item Newtonian Schema Universe (NSU):
+    \begin{itemize}
+      \item Universum beschrieben durch dynamische Gleichungen
+      \item Universum als Computer: Anfangszustand $\quad \begin{matrix*}\text{Berechnung}\\ \longrightarrow\end{matrix*} \quad $ Endzustand
+    \end{itemize}
+    \item[]
+    \item Lagrangian Schema Universe (LSU):
+    \begin{itemize}
+      \item Universum beschrieben durch Lagrangedichte
+      \item Universum als globales vierdimensionales Randwertproblem
+      \item[]
+      \item Vorteile:
+      \item gleicher Lösungsweg für jede Teilmenge des Universum \rightarrow Änlichkeit von kausal nicht verbundenen Teile des Universums
+      \item elegante Einbindung von Quanteneffekten und Allgemeine Relativitätstheorie \rightarrow keine Trennung von Raum und Zeit wie bei dynamischer Berechnung von Computer
+    \end{itemize}
+  \end{itemize}
 
 \end{frame}
 
 \begin{frame}{Ausblick}
-
+  \begin{itemize}
+    \item Ist das Universum ein digitaler Computer?
+    \item dafür sprechen:
+    \begin{itemize}
+      \item enger Zusammenhang zwischen Informationsverarbeitung zwischen Computern und dem Universum
+      \item Effizienz von digitalen Computern fraglich
+    \end{itemize}
+    \item[]
+    \item Ist das Universum ein Quantencomputer?
+    \begin{itemize}
+      \item Quantencomputer kann fundamentalen Quanteneffekte des Universums beschrieben
+      \item Erklärung für Koexistenz von Zufälligkeit und Ordnung des Universums
+    \end{itemize}
+    \item[]
+    \item offene Fragen:
+    \begin{itemize}
+      \item Ist das Universum deterministisch oder zufällig?
+      \item Bietet das Universum unendlich viel Speicherplatz?
+      \item Wie viel Information beinhaltet das Universum? \rightarrow nächster Vortrag
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Literaturverzeichnis}
   \begin{itemize}
     \item[100] https://en.wikipedia.org/wiki/Qubit
     \item[200]
+    \item[300] https://de.wikipedia.org/wiki/Quantencomputer
+    \item[400]
   \end{itemize}
 
 \end{frame}
